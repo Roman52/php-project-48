@@ -1,5 +1,5 @@
 {
-    "name": "roman52/gendiff",
+    "name": "hexlet/code",
     "description": "Generator of differences in config files",
     "bin": [
         "bin/gendiff"
@@ -10,7 +10,14 @@
             "email": "rzharov.dev@gmail.com"
         }
     ],
+    "autoload": {
+        "files": [
+            "src/Runner.php",
+            "src/Core.php"
+        ]
+    },
     "require": {
-        "docopt/docopt": "^1.0"
+        "docopt/docopt": "^1.0",
+        "funct/funct": "^1.6"
     }
 }

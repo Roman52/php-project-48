@@ -9,6 +9,8 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
+use function GenDiff\Runner\run;
+
 $doc = <<<DOC
 Generate diff
 
@@ -23,7 +25,10 @@ Options:
   --format <fmt>                Report format [default: stylish]
 DOC;
 
-$args = Docopt::handle($doc, []);
-foreach ($args as $k => $v) {
-    echo $k . ': ' . json_encode($v) . PHP_EOL;
+$args = Docopt::handle($doc);
+
+try {
+    run($args['<firstFile>'], $args['<secondFile>'], $args['--format']);
+} catch (Exception $e) {
+    echo $e->getMessage();
 }
