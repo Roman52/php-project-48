@@ -1,5 +1,6 @@
 {
-    "name": "hexlet/code",
+    "name": "roman52/gendiff",
+    "description": "Generator of differences in config files",
     "bin": [
         "bin/gendiff"
     ],
