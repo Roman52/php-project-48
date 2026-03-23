@@ -13,7 +13,8 @@
     "autoload": {
         "files": [
             "src/Runner.php",
-            "src/Core.php"
+            "src/Core.php",
+            "src/Builder.php"
         ]
     },
     "require": {
